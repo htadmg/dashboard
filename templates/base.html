@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles/principal.css">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+    <nav>
+        <a href="produto_loja">Produto X Loja</a>
+        <strong class="rosa">|</strong>
+        <a href="#" data-src="loja_faturamento">Loja X Faturamento</a>
+        <strong class="rosa">|</strong>
+        <a href="#" data-src="curva_abc">Curva ABC</a>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
