@@ -7,20 +7,25 @@ df = pd.read_excel("Vendas.xlsx")
 def init_dashboard(app):
 
     fig = px.bar(df, x="Produto", y="Quantidade", color="ID Loja", barmode="group")
-
     opcoes = list(df['ID Loja'].unique())
     opcoes.append("Todas as Lojas")
 
     app.layout = html.Div(children=[
         html.H6('Produto X Loja'),
-        dcc.Dropdown(opcoes, value="Todas as Lojas", id='lista_lojas'),
-
+        dcc.Dropdown(opcoes, value="Todas as Lojas", id='lista_lojas', clearable=True),
         dcc.Graph(
             id='grafico_quantidade_vendas',
             figure=fig
         )
     ])
-
+    @app.callback(
+        Output('lista_lojas', 'value'),
+        Input('lista_lojas', 'value')
+    )
+    def update_dropdown(value):
+        if value is None:  # Quando o dropdown é limpo (clicando no "X"), o valor será None
+            return "Todas as Lojas"
+        return value
     @app.callback(
         Output('grafico_quantidade_vendas', 'figure'),
         Input('lista_lojas', 'value')
