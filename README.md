@@ -79,3 +79,13 @@ python -m venv venv
 ```bash
 pip install -r requirements.txt
 ```
+
+### Iniciar o Servidor de Desenvolvimento
+
+Inicie o servidor de desenvolvimento com o comando:
+
+```bash
+python manage.py runserver
+```
+### Acessar o Projeto
+Abra um navegador e vá para http://127.0.0.1:8000/ para ver o aplicativo em funcionamento.
