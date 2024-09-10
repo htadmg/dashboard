@@ -1,16 +1,21 @@
-from dash import Dash, html, dcc, Output, Input
+from dash import html, dcc, Output, Input
 import pandas as pd
 import plotly.express as px
-from flask import Flask
 
 df = pd.read_excel("Vendas.xlsx")
 
 # Agrupar os dados por Produto e somar os valores de "Valor Final"
-df_agrupado = df.groupby(['Produto', 'ID Loja'], as_index=False)['Valor Final'].sum()
+df_agrupado = df.groupby(['Produto', 'ID Loja'],
+                         as_index=False)['Valor Final'].sum()
 
 
 def init_faturamento(app):
-    fig = px.bar(df_agrupado, x="Produto", y="Valor Final", color="ID Loja", barmode="group", text_auto=True)
+    fig = px.bar(df_agrupado,
+                 x="Produto",
+                 y="Valor Final",
+                 color="ID Loja",
+                 barmode="group",
+                 text_auto=True)
 
     # Configurar a exibição do texto no gráfico
     fig.update_traces(textposition='outside')
@@ -42,10 +47,19 @@ def init_faturamento(app):
     )
     def update_output(value):
         if value == "Todas as Lojas":
-            fig = px.bar(df_agrupado, x="Produto", y="Valor Final", color="ID Loja", barmode="group", text_auto=True)
+            fig = px.bar(df_agrupado,
+                         x="Produto",
+                         y="Valor Final",
+                         color="ID Loja",
+                         barmode="group",
+                         text_auto=True)
         else:
             tabela_filtrada = df_agrupado.loc[df_agrupado['ID Loja'] == value]
-            fig = px.bar(tabela_filtrada, x="Produto", y="Valor Final", color="ID Loja", barmode="group",
+            fig = px.bar(tabela_filtrada,
+                         x="Produto",
+                         y="Valor Final",
+                         color="ID Loja",
+                         barmode="group",
                          text_auto=True)
 
         # Atualizar o gráfico para exibir o texto com o valor total

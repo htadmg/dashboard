@@ -1,10 +1,14 @@
+
+
 import pandas as pd
 import plotly.graph_objects as go
 from dash import Dash, html, dcc, Output, Input
 
 # Função para construir o DataFrame
+
+
 def build_dataframe(name_dataframe, col):
-    dataframe = pd.read_excel(name_dataframe)  # Ajuste para o seu arquivo Excel
+    dataframe = pd.read_excel(name_dataframe)
     grp = dataframe.groupby([col])[col].count()
     df = pd.DataFrame(grp)
     df.index.name = ''
@@ -13,6 +17,7 @@ def build_dataframe(name_dataframe, col):
     percentage = dataframe[col].value_counts(normalize=True).rename(f'{col}_percentage')
     df = pd.concat([count, percentage], axis=1)
     return df
+
 
 # Função para calcular a porcentagem cumulativa
 def cumulative(dataframe, col):
@@ -29,12 +34,14 @@ def cumulative(dataframe, col):
     df['cumulative'] = df['cumulative'] * 100
     return df
 
-# Aplicar as funções para gerar os dados do gráfico
+
 df_agrupado = build_dataframe('Vendas.xlsx', 'Produto')
 df_agrupado = cumulative(df_agrupado, 'Produto')
 
+
 # Inicializar o Dash app
 app = Dash(__name__)
+
 
 # Função para criar o layout do gráfico de Pareto
 def init_curva(app):
@@ -81,7 +88,10 @@ def init_curva(app):
 
     app.layout = html.Div(children=[
         html.H6('Curva ABC - Produto X Loja (Pareto)'),
-        dcc.Dropdown(opcoes, value="Todos os Produtos", id='lista_lojas', clearable=True),
+        dcc.Dropdown(opcoes,
+                     value="Todos os Produtos",
+                     id='lista_lojas',
+                     clearable=True),
         dcc.Graph(
             id='grafico_curva_abc',
             figure=fig
@@ -167,4 +177,3 @@ def init_curva(app):
                 barmode='group'
             )
         return fig
-
