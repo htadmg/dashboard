@@ -50,34 +50,32 @@ Para executar este projeto localmente, siga os passos abaixo:
 ### Passos de Instalação
 
 1. **Clone o Repositório**
-
-    - Usando HTTPS:
-     ```bash
-     git clone https://github.com/htadmg/dashboard_com_dash.git
-     ```
-   - Usando SSH:
-     ```bash
-     git clone git@github.com:htadmg/dashboard_com_dash.git
-     ```
-   - Navegue até o diretório do projeto:
-     ```bash
-        cd .\dashboard_com_dash
-     ```
+- Usando HTTPS:
+```bash
+git clone https://github.com/htadmg/dashboard_com_dash.git
+```
+- Usando SSH:
+```bash
+git clone git@github.com:htadmg/dashboard_com_dash.git
+```
+- Navegue até o diretório do projeto:
+```bash
+cd .\dashboard_com_dash
+```
    
 3. **Crie e Ative um Ambiente Virtual (opcional, mas recomendado)**
-    - **Para Linux/MacOS:**
-     ```bash
-     python -m venv venv
-     source venv/bin/activate
-     ```
+- **Para Linux/MacOS:**
+```bash
+python -m venv venv
+source venv/bin/activate
+```
 
-   - **Para Windows:**
-     ```powershell
-     python -m venv venv
-     .\venv\Scripts\Activate.ps1
-     ```   
+- **Para Windows:**
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```   
 3. **Instale as dependências**
-
-   ```bash
-   pip install -r requirements.txt
-
+```bash
+pip install -r requirements.txt
+```
