@@ -53,15 +53,15 @@ Para executar este projeto localmente, siga os passos abaixo:
 
     - Usando HTTPS:
      ```bash
-     git clone https://github.com/htadmg/lista_de_Tarefas.git
+     git clone https://github.com/htadmg/dashboard_com_dash.git
      ```
    - Usando SSH:
      ```bash
-     git clone git@github.com:htadmg/lista_de_Tarefas.git
+     git clone git@github.com:htadmg/dashboard_com_dash.git
      ```
    - Navegue até o diretório do projeto:
      ```bash
-        cd .\lista_de_tarefas
+        cd .\dashboard_com_dash
      ```
    
 3. **Crie e Ative um Ambiente Virtual (opcional, mas recomendado)**
