@@ -85,7 +85,7 @@ pip install -r requirements.txt
 Inicie o servidor de desenvolvimento com o comando:
 
 ```bash
-python manage.py runserver
+python main.py runserver
 ```
 ### Acessar o Projeto
-Abra um navegador e vá para http://127.0.0.1:8000/ para ver o aplicativo em funcionamento.
+Abra um navegador e vá para http://127.0.0.1:5000/ para ver o aplicativo em funcionamento.
