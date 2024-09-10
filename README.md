@@ -8,6 +8,15 @@ Este projeto é um dashboard de vendas que utiliza a biblioteca Dash para visual
 - **Loja X Faturamento**: Mostra o faturamento por produto e loja.
 - **Curva ABC (Gráfico de Pareto)**: Apresenta a curva ABC de produtos, com base na quantidade vendida e o percentual cumulativo.
 
+## Tecnologias Usadas
+
+- **Python**: Linguagem de programação usada para construir o backend.
+- **Flask**: Framework para desenvolvimento de aplicações web em Python.
+- **Dash**: Framework para criar aplicações web interativas com gráficos.
+- **Plotly**: Biblioteca para criação de gráficos interativos.
+- **HTML/CSS**: Linguagens de marcação e estilo usadas para construir e estilizar a interface do usuário.
+- **Pandas**: Biblioteca para manipulação e análise de dados.
+- 
 ## Estrutura do Projeto
 
 A estrutura do projeto está organizada da seguinte forma:
@@ -28,28 +37,47 @@ A estrutura do projeto está organizada da seguinte forma:
 ├── Vendas.xlsx               # Arquivo Excel com dados de vendas
 └── requirements.txt          # Dependências do projeto
 ```
+## Como Configurar o Projeto
 
-## Requisitos
+Para executar este projeto localmente, siga os passos abaixo:
 
-- Python 3.8 ou superior
-- Bibliotecas necessárias estão listadas no arquivo `requirements.txt`
+### Pré-requisitos
 
-Para instalar as dependências, execute:
+- **Python 3.x** instalado no seu sistema.
+- **Virtualenv** (opcional, mas recomendado) para criar um ambiente virtual.
+- **Git** (opcional) para clonar o repositório.
 
-```bash
-pip install -r requirements.txt
-```
+### Passos de Instalação
 
-## Como Executar
+1. **Clone o Repositório**
 
-1. Coloque o arquivo Vendas.xlsx na raiz do projeto.
-2. Execute o servidor Flask:
+    - Usando HTTPS:
+     ```bash
+     git clone https://github.com/htadmg/lista_de_Tarefas.git
+     ```
+   - Usando SSH:
+     ```bash
+     git clone git@github.com:htadmg/lista_de_Tarefas.git
+     ```
+   - Navegue até o diretório do projeto:
+     ```bash
+        cd .\lista_de_tarefas
+     ```
+   
+3. **Crie e Ative um Ambiente Virtual (opcional, mas recomendado)**
+    - **Para Linux/MacOS:**
+     ```bash
+     python -m venv venv
+     source venv/bin/activate
+     ```
 
-```bash
-  python app.py
-```
-3. Acesse o dashboard no navegador:
+   - **Para Windows:**
+     ```powershell
+     python -m venv venv
+     .\venv\Scripts\Activate.ps1
+     ```   
+3. **Instale as dependências**
 
-```bash
- http://127.0.0.1:5000/
-```
+   ```bash
+   pip install -r requirements.txt
+
