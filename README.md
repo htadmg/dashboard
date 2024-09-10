@@ -72,7 +72,7 @@ source venv/bin/activate
 
 - **Para Windows:**
 ```powershell
-python -m venv venv
+python -m venv .venv
 .\venv\Scripts\Activate.ps1
 ```   
 3. **Instale as dependências**
