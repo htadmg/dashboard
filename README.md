@@ -63,7 +63,7 @@ git clone git@github.com:htadmg/dashboard_com_dash.git
 cd .\dashboard_com_dash
 ```
    
-3. **Crie e Ative um Ambiente Virtual (opcional, mas recomendado)**
+2. **Crie e Ative um Ambiente Virtual (opcional, mas recomendado)**
 - **Para Linux/MacOS:**
 ```bash
 python -m venv .venv
