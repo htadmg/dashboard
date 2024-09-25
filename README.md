@@ -1,5 +1,6 @@
 # Dashboard de Vendas com Dash e Flask
 
+## Descrição do Projeto
 Este projeto é um dashboard de vendas que utiliza a biblioteca Dash para visualizações de dados e Flask para o backend. Ele possui três seções principais: Produto X Loja, Loja X Faturamento e Curva ABC (Gráfico de Pareto), que exibem diferentes análises sobre os dados de vendas a partir de um arquivo Excel.
 
 ## Funcionalidades
@@ -17,37 +18,10 @@ Este projeto é um dashboard de vendas que utiliza a biblioteca Dash para visual
 - **HTML/CSS**: Linguagens de marcação e estilo usadas para construir e estilizar a interface do usuário.
 - **Pandas**: Biblioteca para manipulação e análise de dados.
 - 
-## Estrutura do Projeto
 
-A estrutura do projeto está organizada da seguinte forma:
-```
-├── main.py                   # Arquivo principal contendo o servidor Flask
-├── dashboards/
-│   ├── produto_loja.py       # Módulo para o gráfico Produto X Loja
-│   ├── loja_faturamento.py   # Módulo para o gráfico Loja X Faturamento
-│   └── curva_abc.py          # Módulo para o gráfico Curva ABC (Pareto)
-├── templates/
-│   ├── base.html             # Template base HTML
-│   ├── produto_loja.html     # Template da página Produto X Loja
-│   ├── loja_faturamento.html # Template da página Loja X Faturamento
-│   └── curva_abc.html        # Template da página Curva ABC
-├── static/
-│   ├── styles/
-│   │   └── principal.css     # Estilos CSS
-├── Vendas.xlsx               # Arquivo Excel com dados de vendas
-└── requirements.txt          # Dependências do projeto
-```
 ## Como Configurar o Projeto
 
 Para executar este projeto localmente, siga os passos abaixo:
-
-### Pré-requisitos
-
-- **Python 3.x** instalado no seu sistema.
-- **Virtualenv** (opcional, mas recomendado) para criar um ambiente virtual.
-- **Git** (opcional) para clonar o repositório.
-
-### Passos de Instalação
 
 1. **Clone o Repositório**
 - Usando HTTPS:
